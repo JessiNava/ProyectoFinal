@@ -1,0 +1,14 @@
+<body>
+    {% for p in perros%}
+        <li>{{p}}</li>
+        <button>
+            <a href="{%url 'eliminarPerro' p.name%}"> Eliminar </a>
+            <a href="{%url 'editarPerro' p.name%}"> Editar </a>
+        </button>    
+
+    
+    {% endfor %}
+    <br>
+    <br>
+    <a href="perros">Agregar otro Perro</a>
+</body>

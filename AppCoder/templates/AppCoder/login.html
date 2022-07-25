@@ -1,0 +1,28 @@
+{% extends 'AppCoder/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if request.user.is_authenticated %}
+    <a hidden class="btn btn-primary" style="font-size:15px;color: #f7941d;" href="{% url 'Login' %}">&#128100; Ingresar</a>
+    {% endif %}
+<title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">{% csrf_token %}
+        
+        
+        {{form.as_p}}
+        
+        <button type="submit">Iniciar sesion</button>
+        <button><a style="color: #f7941d;" href="register">Registrar</a></button></form>
+    
+        
+</body>
+</html>
+{% endblock %}
+

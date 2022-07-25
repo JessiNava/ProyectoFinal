@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+    <h1> Borrar Registro </h1>
+    <form method="post"> {% csrf_token %}
+        Estas seguro que queres borrar el Registro: "{{object}}"
+        <input type="submit" value="Submit">
+    </form>
+    <p>    
+        <a href="{% url 'List' %}">Regresar</a>
+
+
+    </p>
+
+    
+{% endblock  %}

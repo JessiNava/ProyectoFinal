@@ -1,0 +1,19 @@
+{% extends 'AppCoder/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+    <p>  Nombre del Gato: <i>{{gato.name}}</i> </p>
+    <p>  Raza del Gato: <i>{{gato.raza}}</i> </p>
+    <p>  Edad del Gato: <i>{{gato.edad}}</i> </p>
+    
+
+    <p>    
+        <a href="{% url 'List' %}">Regresar</a>
+
+
+    </p>
+
+
+
+
+    
+{% endblock  %}
